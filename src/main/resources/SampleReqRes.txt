@@ -1,0 +1,120 @@
+----CREATE-----
+
+URL : http://localhost:8080/createSales
+METHOD : POST
+SAMPLE REQUEST BODY : 
+
+	{
+	    "salesid" : 2,
+	    "salesno" : "ORD2",
+	    "availablestatus" : "online",
+	    "status" : "orderaccepted",
+	    "total": 200.00,
+	    "contactdetails" : {
+	        "contactid" : 1,
+	        "contactname" : "Vaibhav Rawat",
+	        "mobileno" : "9726098261",
+	        "email" : "vaibhav.croods@gmail.com",
+	        "address" : "Vastrapur"
+	    },
+	    "salesitemvos" : [
+	        {
+	             "product" : {
+	                 "productid" : 1,
+	                 "productname" : "Cake",
+	                 "mrp" : 500.00,
+	                 "sellingprice" : 500.00
+	             },
+	        "quantity" : "1",
+	        "netamount" : "500"       
+	        }
+	    ]
+	
+	}
+	
+
+SAMPLE RESPONSE : 2022-02-02T19:28:39.305443000Z
+---------------------------
+
+----GET DATA-----
+
+URL : http://localhost:8080/getSalesDetails?salesId=2
+METHOD : GET
+SAMPLE RESPONSE :
+	{
+	    "salesid" : 2,
+	    "salesno" : "ORD2",
+	    "availablestatus" : "online",
+	    "status" : "orderaccepted",
+	    "total": 200.00,
+	    "contactdetails" : {
+	        "contactid" : 1,
+	        "contactname" : "Vaibhav Rawat",
+	        "mobileno" : "9726098261",
+	        "email" : "vaibhav.croods@gmail.com",
+	        "address" : "Vastrapur"
+	    },
+	    "salesitemvos" : [
+	        {
+	             "product" : {
+	                 "productid" : 1,
+	                 "productname" : "Cake",
+	                 "mrp" : 500.00,
+	                 "sellingprice" : 500.00
+	             },
+	        "quantity" : "1",
+	        "netamount" : "500"       
+	        }
+	    ]
+	
+	}
+
+---------------------------
+
+
+----UPDATE DATA-----
+
+URL : http://localhost:8080/updateSales
+METHOD : PUT
+SAMPLE REQUEST BODY : 
+
+	{
+	    "salesid" : 2,
+	    "salesno" : "ORD2",
+	    "availablestatus" : "online",
+	    "status" : "orderaccepted",
+	    "total": 200.00,
+	    "contactdetails" : {
+	        "contactid" : 1,
+	        "contactname" : "Vaibhav Rawat",
+	        "mobileno" : "9726098261",
+	        "email" : "vaibhav.croods@gmail.com",
+	        "address" : "Vastrapur"
+	    },
+	    "salesitemvos" : [
+	        {
+	             "product" : {
+	                 "productid" : 1,
+	                 "productname" : "Cake",
+	                 "mrp" : 500.00,
+	                 "sellingprice" : 500.00
+	             },
+	        "quantity" : "1",
+	        "netamount" : "500"       
+	        }
+	    ]
+	
+	}
+	
+	
+SAMPLE RESPONSE : 2022-02-02T19:28:39.305443000Z
+	
+---------------------------
+
+
+----DELETE DATA-----
+
+URL : http://localhost:8080/deleteSales?salesId=2
+METHOD : DELETE
+SAMPLE RESPONSE : "Document with Sales ID 1 has been deleted"
+---------------------------
